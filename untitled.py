@@ -12,13 +12,13 @@ def main():
 		secret_guess = random.randint(1,50)
 	elif dificulity == "h":
 		secret_guess = random.randint(1,100)
-	else:
-		print("enter valid dificulity")
+
 		
 	guessed = None
 	attempt = 0
 	while guessed != secret_guess:
 		guessed = input("guess the number bud ")
+		
 		if guessed.lower() == "quit":
 			exit()
 			return
