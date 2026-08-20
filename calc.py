@@ -25,6 +25,7 @@ def main():
 				b = int(input("what is the second number?:  "))
 			except ValueError:
 				print("enter a valid number")
+				continue
 			if user_type == "add":
 				result = add(a,b)
 				print(result)
