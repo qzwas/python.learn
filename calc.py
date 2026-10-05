@@ -1,22 +1,24 @@
 def add(a,b):
 	c=a+b
 	return c
-def multp(a,b):
+def mul(a,b):
 	c=a*b
 	return c
 def minus(a,b):
 	c=a-b
 	return c
 def div(a,b):
-	c=a//b
+	c=a/b
 	return c
 
 def main():
-	print("this is a calc what do you wana calc? add-multp-minus-div")
+	print("=== this is a Calcolator what do you wana calc? add-mul-minus-div ===")
 	
-	user_type = input("enter type: ")	
-	while user_type not in ["add","multp","minus","div"]:
-		user_type = input("enter valid type ")
+	user_type = input("enter type: ")
+	if user_type == "quit":
+		quit()	
+	while user_type not in ["add","mul","minus","div"]:
+		user_type = input("enter a valid type ")
 	
 	while True:
 		
@@ -36,8 +38,8 @@ def main():
 				print(result)
 				break
 				
-			elif user_type == "multp":
-				result = multp(a,b)
+			elif user_type == "mul":
+				result = mul(a,b)
 				print(result)
 				break
 			
